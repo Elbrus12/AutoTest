@@ -323,7 +323,6 @@ public class HandlerTests {
                 .body("code", equalTo(code));
     }
 
-// Получения пользователя GET, перед этим сначала добавивь его методом POST
     @Test
     public void GetUsersTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL),Specifications.responseSpecOK200());
@@ -356,7 +355,6 @@ public class HandlerTests {
                 .body("id",equalTo(id)).body("username",equalTo(username));
     }
 
-// Негативный сценарий поиска, ищем несуществующего пользователя
     @Test
     public void unknownUsersTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL),Specifications.responseSpecError404());
@@ -372,8 +370,6 @@ public class HandlerTests {
 
     }
 
-
-// Удаляем пользователя по Username в endpoint
     @Test
     public void DeleteUserTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL),Specifications.responseSpecOK200());
@@ -407,7 +403,6 @@ public class HandlerTests {
                 .body("code",equalTo(code)).body("message",equalTo(message));
     }
 
-// Негативный сценарий удаления, вводи username несуществующего пользователя
     @Test
     public void unDeleteUserTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL),Specifications.responseSpecError404());
