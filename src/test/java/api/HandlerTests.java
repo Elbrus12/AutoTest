@@ -1,13 +1,9 @@
 /*Для тестироване API использована библиотека RestAssured и junit*/
-
 package api;
-
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.List;
 import java.util.Random;
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
